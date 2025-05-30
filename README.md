@@ -1,10 +1,13 @@
-📝 API de Gerenciamento de Tarefas – Spring Boot + MongoDB
-Este projeto é uma API REST simples para gerenciamento de tarefas, construída com Spring Boot e MongoDB. A aplicação permite criar, listar, atualizar e excluir tarefas por meio de requisições HTTP.
 
-📂 Estrutura do Projeto
-bash
-Copiar
-Editar
+# 📝 API de Gerenciamento de Tarefas – Spring Boot + MongoDB
+
+Este projeto é uma API REST simples para gerenciamento de tarefas, construída com **Spring Boot** e **MongoDB**. A aplicação permite **criar**, **listar**, **atualizar** e **excluir** tarefas por meio de requisições HTTP.
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
 src/
 └── main/
     ├── java/
@@ -16,34 +19,35 @@ src/
     │       └── TarefasApplication.java  # Classe principal
     └── resources/
         └── application.properties  # Configurações da aplicação
-⚙️ Tecnologias Utilizadas
-Java 21
+```
 
-Spring Boot 3.4.4
+---
 
-Spring Web
+## ⚙️ Tecnologias Utilizadas
 
-Spring Data MongoDB
+- Java 21  
+- Spring Boot 3.4.4  
+- Spring Web  
+- Spring Data MongoDB  
+- Spring Validation  
+- MongoDB  
+- Maven  
 
-Spring Validation
+---
 
-MongoDB
+## 🛠️ Pré-requisitos
 
-Maven
-
-🛠️ Pré-requisitos
 Antes de rodar o projeto, certifique-se de ter:
 
-Java 21+ instalado
+- Java 21+ instalado  
+- Maven instalado  
+- MongoDB Community Edition instalado e em execução localmente  
 
-Maven instalado
+---
 
-MongoDB Community Edition instalado e em execução localmente
+## 🚀 Como Executar o Projeto
 
-🚀 Como Executar o Projeto
-bash
-Copiar
-Editar
+```bash
 # Clone o repositório
 git clone https://github.com/seu-usuario/tarefas-api.git
 
@@ -52,27 +56,33 @@ cd tarefas-api
 
 # Execute a aplicação
 ./mvnw spring-boot:run
-A aplicação será iniciada na porta padrão http://localhost:8080.
+```
 
-📥 Endpoints Disponíveis
-Método	Endpoint	Descrição
-GET	/tarefas	Lista todas as tarefas
-POST	/tarefas	Cria uma nova tarefa
-PUT	/tarefas/{id}	Atualiza uma tarefa existente
-DELETE	/tarefas/{id}	Remove uma tarefa pelo ID
+A aplicação será iniciada na porta padrão `http://localhost:8080`.
 
-📌 Exemplo de Requisição – Criar Tarefa
-URL: http://localhost:8080/tarefas
+---
 
-Método: POST
+## 📥 Endpoints Disponíveis
 
-Body (JSON):
+| Método | Endpoint           | Descrição                       |
+|--------|--------------------|---------------------------------|
+| GET    | `/tarefas`         | Lista todas as tarefas          |
+| POST   | `/tarefas`         | Cria uma nova tarefa            |
+| PUT    | `/tarefas/{id}`    | Atualiza uma tarefa existente   |
+| DELETE | `/tarefas/{id}`    | Remove uma tarefa pelo ID       |
 
-json
-Copiar
-Editar
+---
+
+## 📌 Exemplo de Requisição – Criar Tarefa
+
+- **URL:** `http://localhost:8080/tarefas`  
+- **Método:** `POST`  
+- **Body (JSON):**
+
+```json
 {
   "titulo": "Estudar Spring Boot",
   "descricao": "Aprender sobre Controllers e Services",
   "status": "Em andamento"
 }
+```
